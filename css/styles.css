@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+:root{
+    --background : #f1f1f1;
+    --h1color : #175cff;
+    --timerTextColor : #333;
+    --hourColor : #172353;
+    --separatorColor : #525763;
+    --borderColor: #ccc;
+    --fontColor2: #fff;
+
+    --btnBoxShadow : #a1a1a1;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 3rem;
+    background: var(--background);
+    height: 100vh;
+}
+
+.container h1{
+    color: var(--h1color);
+}
+
+.timer{
+    display: flex;
+    font-size: 55px;
+    font-weight: bold;
+    color: var(--timerTextColor);
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: var(--hourColor);
+    min-width: 90px;
+}
+
+.separator{
+    padding: 0 10px;
+    color: var(--separatorColor)
+
+}
+
+#miliseconds{
+    font-size: 30px;
+    color: var(--separatorColor); 
+}
+
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.btn{
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid var(--borderColor);
+    transition: all .3s ease-in-out;
+}
+
+
+.btn:hover{
+    transform: scale(1.04);
+    box-shadow: 3px 5px 10px var(--btnBoxShadow);
+}
+
+.btn:active{
+    transform: scale(1);
+}
+
+
+#startBtn{
+    background: var(--h1color);
+    color: var(--fontColor2);
+}
+
+
+#pauseBtn, #resumeBtn{
+    display: none;
+}
